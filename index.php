@@ -43,6 +43,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Schoolbell&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/8284d2aa07.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header section -->
@@ -66,22 +67,23 @@
             $messages = array($exampleMessage);
             foreach($messages as $message): ?>
                 <div class="message-div">
-                    <div class="message-header">
-                        <h1 class="message-title outfit-bold"><?php echo $message->getSubject(); ?></h1>
-                        <h2 class="message-sender outfit-bold"><?php echo $message->getSender(); ?></h2>
-                    </div>
+                    <h1 class="schoolbell-regular" id="message-subject"><?php echo $message->getSubject(); ?></h1>
+                    <h1 class="schoolbell-regular" id="message-receiver">From: <?php echo $message->getSender(); ?></h1>
                 </div>
         <?php endforeach; ?>
     </div>
 
     <!-- add to list section -->
     <div id="add-to-list">
-        <h1 id="add-to-list-title" class="schoolbell-regular" >Add to list</h1>
-        <div id="plus-sign-container">
-            <img src="../assets/plus.png" alt="plus-sign">
+        <div id="add-to-list-header">
+            <h1 id="add-to-list-title" class="schoolbell-regular" >Add to list</h1>
+            <i class="fas fa-chevron-down" style="font-size: 24px;"></i>
         </div>
-        <form id="add-to-list-form" style="display: none;">
-            <input type="text" id="form-title" placeholder="A title" required>
+        <form id="add-to-list-form" style="display: none;" >
+            <div class="input-container">
+                <label for="form-receiver" class="schoolbell-regular">To: </label>
+                <input type="text" id="form-receiver" required>
+            </div>
             <input type="text" id="form-message" placeholder="a description" required>
         </form>
     </div>
