@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schoolbell-regular {
+  font-family: "Schoolbell", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.outfit-bold {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#full-container {
+    display: flex;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #33ffd2;
+}
+
+#login-container {
+    width: 40vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffd233;
+    border-radius: 1rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: .2rem;
+}
+
+.input-container {
+    width: 100%;
+    height: 10%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+}
+
+.input-container label {
+    width: auto;
+    font-size: 1.2rem;
+    margin-right: .3rem;
+}
+
+.input-container input {
+    height: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    flex-grow: 1;
+}
+
+.input-container input:focus {
+    outline: none;
+}
+
+#form-submit {
+    width: 18%;
+    height: 12%;
+    background-color: #00b050;
+    margin: auto auto;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
+
+#form-submit:hover {
+    background-color: #00a040;
+    transform: scale(1.015);
+}
