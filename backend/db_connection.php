@@ -1,8 +1,15 @@
 <?php
+    require_once __DIR__ . '../vendor/autoload.php'; //path to your autoload.php
+
+    use Dotenv\Dotenv;
+
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
     // db credentials
     $servername = "localhost";
-    $username = "root";
-    $password = "T!grr4248!";
+    $username = $_ENV['DB_USERNAME'];
+    $password = $_ENV['DB_PASSWORD'];
     $dbname = "message_center";
 
     $dsn = "mysql:host=" . $servername . ";dbname=" . $dbname;
