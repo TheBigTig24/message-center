@@ -3,8 +3,8 @@
     <title>Test</title>
     <script>
         async function test() {
-            const response = await fetch('http://localhost:3001/routes/users?userId=1', {
-                method: 'GET',
+            const response = await fetch('http://localhost:3001/routes/messages', {
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 }

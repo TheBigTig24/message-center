@@ -12,10 +12,10 @@
     <div id="full-container">
         <div id="login-container">
             <h1 class="outfit-bold">Register</h1>
-            <form>
+            <form id="register-form" method="POST" action="../../backend/router.php">
                 <div class="input-container">
                     <label for="email" class="schoolbell-regular">Email</label>
-                    <input type="text" id="email-input" name="email" required>
+                    <input type="email" id="email-input" name="email" required>
                 </div>
                 <div class="input-container">
                     <label for="username" class="schoolbell-regular">Username</label>
@@ -23,12 +23,13 @@
                 </div>
                 <div class="input-container">
                     <label for="password" class="schoolbell-regular">Password</label>
-                    <input type="text" id="password-input" name="password" required>
+                    <input type="password" id="password-input" name="password" required>
                 </div>
                 <div class="input-container">
                     <label for="confirm-password" class="schoolbell-regular">Confirm Password</label>
-                    <input type="text" id="confirm-password-input" name="confirm-password" required>
+                    <input type="password" id="confirm-password-input" name="confirm-password" required>
                 </div>
+                <p id="err-msg"></p>
                 <input type="submit" id="form-submit" class="schoolbell-regular" value="Send"></input>
             </form>
             <p>

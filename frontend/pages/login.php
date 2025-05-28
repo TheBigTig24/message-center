@@ -12,7 +12,7 @@
     <div id="full-container">
         <div id="login-container">
             <h1 class="outfit-bold">Sign In</h1>
-            <form>
+            <form id="login-form" method="POST" action="../../backend/router.php" >
                 <div class="input-container">
                     <label for="email" class="schoolbell-regular">Email</label>
                     <input type="text" id="email-input" name="email" required>
@@ -21,6 +21,7 @@
                     <label for="password" class="schoolbell-regular">Password</label>
                     <input type="text" id="password-input" name="password" required>
                 </div>
+                <p id="err-msg"></p>
                 <input type="submit" id="form-submit" class="schoolbell-regular" value="Send"></input>
             </form>
             <p>
