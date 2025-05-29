@@ -12,6 +12,12 @@
 
     switch ($method) {
         case 'GET':
+            $response = getMessagesByReceiverId($pdo, $_GET['receiverId']);
+            if (isset($response['status']) && $response['status'] === 'error') {
+                sendErrorResponse($response['status'], $response['message'], $response['code']);
+            } else {
+                sendSuccessResponse('Messages fetched successfully.', $response);
+            }
             break;
 
         case 'POST':
